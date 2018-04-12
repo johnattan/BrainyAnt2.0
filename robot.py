@@ -2,14 +2,7 @@
 
 import random
 from fireant import FireAnt
-import RPi.GPIO as GPIO
 import userControl as UC        # use a custom control library
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(17, GPIO.OUT)
-GPIO.setup(22, GPIO.OUT)
-GPIO.setup(23, GPIO.OUT)
-GPIO.setup(24, GPIO.OUT)
 
 # Examples of user defined functions
 
