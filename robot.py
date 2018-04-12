@@ -2,6 +2,7 @@
 
 import random
 from fireant import FireAnt
+import RPi.GPIO as GPIO
 import userControl as UC        # use a custom control library
 
 # Examples of user defined functions
@@ -11,12 +12,14 @@ def my_function(value):
     print(value)
 
 def light_on():
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(16, GPIO.OUT)
     print("Light is ON")
-
+    GPIO.output(16, True)
 
 def light_off():
     print("Light is OFF")
-
+    GPIO.cleanup()
 
 def light_switch(value):
     if value:
